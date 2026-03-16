@@ -8,7 +8,7 @@
 
 ## 📸 Preview
 
-![2026-03-16 17-51-16 (online-video-cutter com)](https://github.com/user-attachments/assets/d0323db1-7a5f-4ab1-84bf-37f88b65a76b)
+<img width="960" height="540" alt="Demo" src="https://github.com/user-attachments/assets/d0323db1-7a5f-4ab1-84bf-37f88b65a76b" />
 <img width="960" height="540" alt="Screenshot_02" src="https://github.com/user-attachments/assets/99c899c6-f85f-41a1-8e71-e7842435f21c" />
 <img width="960" height="540" alt="Screenshot_03" src="https://github.com/user-attachments/assets/19683c33-df66-4272-b46a-9d392f31e930" />
 <img width="960" height="540" alt="Screenshot_05" src="https://github.com/user-attachments/assets/32498900-3c65-4254-bb7d-0fb4732ecd37" />
