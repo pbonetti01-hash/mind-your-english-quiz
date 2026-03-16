@@ -8,9 +8,8 @@
 
 ## 📸 Preview
 
+<img width="1920" height="1080" alt="Screenshot_01" src="https://github.com/user-attachments/assets/31ee138c-4fce-45c5-9a59-1701a490daf1" />
 <img width="960" height="540" alt="Demo" src="https://github.com/user-attachments/assets/d0323db1-7a5f-4ab1-84bf-37f88b65a76b" />
-<img width="960" height="540" alt="Screenshot_02" src="https://github.com/user-attachments/assets/99c899c6-f85f-41a1-8e71-e7842435f21c" />
-<img width="960" height="540" alt="Screenshot_03" src="https://github.com/user-attachments/assets/19683c33-df66-4272-b46a-9d392f31e930" />
 <img width="960" height="540" alt="Screenshot_05" src="https://github.com/user-attachments/assets/32498900-3c65-4254-bb7d-0fb4732ecd37" />
 
 ## 🔗 Live Demo
