@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="/Css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="screen active" id="start-screen">
+            <h1>Mind Your English!</h1>
+            <p>Think you know your English? Put your vocabulary, grammar, and expressions to the test — from British slang to American idioms. Good luck!</p>
+            <img class="container__image" src="Images/English.jpg" alt="Blocks of letters on the table form the word: Learn Languages">
+            <button id="start-btn">Start Quiz</button>
+        </div>
+
+        <div class="screen" id="quiz-screen">
+            <div class="quiz-header">
+                <h2 id="question-text">Question goes here</h2>
+                <div class="quiz-info">
+                    <p>
+                        Question <span id="current-question">1</span> of <span id="total-questions">5</span>
+                    </p>
+
+                    <p>score: <span id="score">0</span></p>
+                </div>
+                <img id="question-image" src="/Images/Happy.jpg" alt="A Man Smilling">
+            </div>
+            
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+
+            <div id="answers-container" class="answers-container">
+                
+            </div>
+        </div>
+        
+        <div id="result-screen" class="screen">
+            <h1>Quiz Results</h1>
+            <div class="result-info">
+                <p>You scored <span id="final-score">0</span> out of <span id="max-score">5</span></p>
+
+                <div id="result-message">Good Job!</div>
+            </div>
+
+            <button id="restart-btn">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="/Js/script.js"></script>
+</body>
+</html>
