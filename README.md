@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="Screenshot_01" src="https://github.com/user-attachments/assets/e8a21764-f351-4a32-a73e-4ddf0d3dbf3c" /># 🧠 Mind Your English!
+# 🧠 Mind Your English!
 
 > Think you know your English? Put your vocabulary, grammar, and expressions to the test — from British slang to American idioms.
 
