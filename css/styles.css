@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ==========================================================================
+   RESET / NORMALIZE
+   ========================================================================== */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    font-family: "DM Sans", Helvetica, sans-serif;
+}
+
+body::before{
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: 
+        linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.6) 100%),
+        var(--BG-IMAGE);
+    background-size: cover;
+    background-position: center;
+    filter: blur(1px);
+    z-index: -1;
+    transition: background-image 5s ease;
+}
+
+
+/* ==========================================================================
+   VARIABLES
+   ========================================================================== */
+
+
+:root{
+    --BG-COLOR: #FFFAFF;
+    --SHADOW-COLOR: rgba(10, 36, 99, 0.25);
+
+    --H1-COLOR: #0A2463;
+
+    --BUTTON-BGCOLOR: #0A2463;
+    --BUTTON-BORDER-COLOR: #071a47;
+    --BUTTON-BORDER-HOVER: #040f2b;
+
+    --CORRECT-BG: #2ecc71;
+    --CORRECT-BORDER: #27ae60;
+    --INCORRECT-BG: #C0392B;
+    --INCORRECT-BORDER: #922b21;
+
+    --PROGRESS-BG: #d6daf5;
+    --PROGRESS-FILL: #0A2463;
+
+    --ANSWER-BG: #f0f2f5;
+    --ANSWER-BORDER: #717C89;
+    --ANSWER-HOVER-BG: #717C89;
+    --ANSWER-HOVER-BORDER: #555e6a;
+
+    --RESULT-INFO-BG: #f0f2f5;
+
+    --BG-IMAGE: url(../Images/Australia.jpg);
+
+    --RESULT-PERFECT: #f1c40f;
+    --RESULT-GREAT: #2ecc71;
+    --RESULT-GOOD: #3498db;
+    --RESULT-AVERAGE: #e67e22;
+    --RESULT-POOR: #e74c3c;
+}
+
+
+/* ==========================================================================
+   START SCREEN 
+   ========================================================================== */
+
+
+#question-image {
+    width: 80%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.container {
+    background-color: var(--BG-COLOR);
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px var(--SHADOW-COLOR);
+    width: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.container__image{
+    width: 500px;
+    margin-bottom: 30px;
+}
+
+.screen {
+    display: none;
+    padding: 2rem;
+    text-align: center;
+}
+
+.screen.active {
+    display: block;
+}
+
+#start-screen h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: var(--H1-COLOR);
+}
+
+#start-screen p{
+    color: var(--TEXT-COLOR);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.quiz-header{
+    margin-bottom: 2rem;
+}
+
+#question-text {
+    color: var(--TEXT-COLOR);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.quiz-info{
+    display: flex;
+    justify-content: space-between;
+    color: var(--ANSWER-BORDER);
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.answers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.answer-btn {
+    background-color: var(--ANSWER-BG);
+    color: var(--TEXT-COLOR);
+    border: 2px solid var(--ANSWER-BORDER);
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.answer-btn:hover{
+    background-color: var(--ANSWER-HOVER-BG);
+    border-color: var(--ANSWER-HOVER-BORDER);
+}
+
+.answer-btn.correct{
+    background-color: var(--CORRECT-BG);
+    border-color: var(--CORRECT-BORDER);
+    color: whitesmoke;
+}
+
+.answer-btn.incorrect{
+    background-color: var(--INCORRECT-BG);
+    border-color: var(--INCORRECT-BORDER);
+    color: whitesmoke;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: var(--PROGRESS-BG);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.progress{
+    height: 100%;
+    background-color: var(--PROGRESS-FILL);
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+
+/* ==========================================================================
+   RESULT SCREEN 
+   ========================================================================== */
+
+
+#result-screen h1 {
+    color: var(--H1-COLOR);
+    margin-top: 30px;
+}
+
+.result-info {
+    background-color: var(--RESULT-INFO-BG);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.result-info p{
+    font-size: 1.2rem;
+    color: var(--TEXT-COLOR);
+    margin-bottom: 1rem;
+}
+
+#result-message {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.result--perfect { color: var(--RESULT-PERFECT); }
+.result--great   { color: var(--RESULT-GREAT); }
+.result--good    { color: var(--RESULT-GOOD); }
+.result--average { color: var(--RESULT-AVERAGE); }
+.result--poor    { color: var(--RESULT-POOR); }
+
+button{
+    background-color: var(--BUTTON-BGCOLOR);
+    color: white;
+    border: 2px solid var(--BUTTON-BORDER-COLOR);
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+button:hover {
+    background-color: var(--BUTTON-BORDER-COLOR);
+    border: 2px solid var(--BUTTON-BORDER-HOVER);
+}
+
+
+/* ==========================================================================
+   RESPONSIVITY
+   ========================================================================== */
+
+
+@media (max-width:500px) {
+    .screen{
+        padding: 1rem;
+    }
+
+    #start-screen h1{
+        font-size: 2rem;
+    }
+
+    #question-text {
+        font-size: 1.3rem;
+    }
+
+    .answer-btn{
+        padding: 12px;
+    }
+
+    button{
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
